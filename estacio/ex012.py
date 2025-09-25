@@ -1,6 +1,12 @@
-numeroDigitado = float(input('Digite um número: '))
+numero = float(input('Digite um número: '))
 
-if numeroDigitado >= 0:
-  print('O número é positivo.')
+if numero >= 0:
+  situacao = 'Positivo'
 else:
-  print('O número é negativo.')
+  situacao = 'Negativo'
+
+resultado = (f'''
+O número {numero} é: {situacao}
+''')
+
+print(resultado)

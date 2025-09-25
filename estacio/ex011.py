@@ -1,17 +1,23 @@
-nomeUsuario = input('Qual é o nome de usuário? ')
-idadeUsuario = int(input('Qual é a idade? '))
+nome = input('Digite seu nome: ')
+idade = int(input('Digite sua idade: '))
 
-if idadeUsuario <= 2:
+if idade <= 2:
   tipo = 'Bebê'
-elif idadeUsuario <= 11:
+elif idade <= 11:
   tipo = 'Criança'
-elif idadeUsuario <= 21:
+elif idade <= 21:
   tipo = 'Jovem'
-elif idadeUsuario <= 64:
+elif idade <= 64:
   tipo = 'Adulto'
-elif idadeUsuario <= 100:
+elif idade <= 100:
   tipo = 'Idoso'
 else:
   tipo = 'Mumia'
   
-print(f'{nomeUsuario} está com {idadeUsuario} e pela tabela é considerado um {tipo}')
+resultado = (f'''
+Nome: {nome}
+Idade: {idade} anos
+Tipo: {tipo}
+''')
+
+print(resultado)

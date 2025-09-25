@@ -1,7 +1,4 @@
 def calcular_custo_viagem(distancia, consumo_medio, preco_combustivel):
-  if consumo_medio <= 0:
-    return None
-  
   litros_necessarios = distancia / consumo_medio
   custo_total = litros_necessarios * preco_combustivel
   
@@ -14,11 +11,12 @@ try:
   
   custo_final = calcular_custo_viagem(distancia_viagem, consumo_veiculo, preco_litro)
   
-  if custo_final is not None:
-    print(f'Para uma viagem de {distancia_viagem} km: ')
-    print(f'O custo estimado apenas com combustível será de: R$ {custo_final:.2f}')
-  else:
-    print('Erro: O consumo do veículo deve ser maior que zero.')
+  resultado = (f'''
+Distância: {distancia_viagem}km
+Custo estimado do combustível: {custo_final:.2f}
+''')
+  
+  print(resultado)
 
 except ValueError:
   print('Erro: Número digitado inválido.')

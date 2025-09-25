@@ -1,8 +1,14 @@
-numero = int(input('Digite um número inteiro: '))
+numero = float(input('Digite um número: '))
 
-if numero == 10:
-  print('O número é igual a 10.')
-elif numero > 10:
-  print('O número é maior que 10.')
+if numero > 10:
+  situacao_numero = 'Maior que 10'
+elif numero < 10:
+  situacao_numero = 'Menor que 10'
 else:
-  print('O número é menor que 10.')
+  situacao_numero = 'Igual a 10'
+  
+resultado = (f'''
+O número {numero} é: {situacao_numero}
+''')
+
+print(resultado)

@@ -1,6 +1,12 @@
-numeroDigitado = float(input('Digite um número: '))
+numero = float(input('Digite um número: '))
 
-if numeroDigitado%2==0:
-  print('Número é par.')
+if numero%2==0:
+  situacao = 'Par'
 else:
-  print('Número é ímpar.')
+  situacao = 'Ímpar'
+
+resultado = (f'''
+O número {numero} é: {situacao}
+''')
+  
+print(resultado)

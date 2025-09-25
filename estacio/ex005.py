@@ -1,10 +1,25 @@
-nome_aluno = input('Digite seu nome: ')
-nome_disciplina = input('Digite a disciplina ')
-n1 = float(input('Digite a nota 1: '))
-n2 = float(input('Digite a nota 2: '))
-n3 = float(input('Digite a nota 3: '))
-n4 = float(input('Digite a nota 4: '))
+def calcular_media(*notas):
+  return sum(notas) / len(notas) # Soma das notas dividido pela quantidade de itens
 
-media = (n1 + n2 + n3 + n4) / 4
-
-print(f'\nNome: {nome_aluno}\nDisciplina: {nome_disciplina}\nNota 1: {n1}\nNota 2: {n2}\nNota 3: {n3}\nNota 4: {n4}\nMédia: {media}\n')
+try:
+  nome_aluno = input('Digite seu nome: ')
+  nome_disciplina = input('Digite a disciplina: ')
+  
+  notas_aluno = []
+  for i in range(4):
+    nota = float(input(f'Digite a nota {i+1}: '))
+    notas_aluno.append(nota)
+    
+  media_final = calcular_media(*notas_aluno)
+  
+  resultado = (f'''
+Nome: {nome_aluno}
+Disciplina: {nome_disciplina}
+Notas: {notas_aluno}
+Média: {media_final}
+''')
+  
+  print(resultado)
+  
+except ValueError:
+  print('Erro: Número digitado inválido.')

@@ -1,10 +1,17 @@
-letraDigitada = input('Qual é seu sexo? ').upper()
-
-if letraDigitada == 'M':
-  sexo = 'Masculino'
-elif letraDigitada == 'F':
-  sexo = 'Feminino'
-else:
-  print('Sexo inválido.')
+sexo_usuario = input('Digite seu sexo: ').upper()
   
-print(f'Seu sexo é {sexo}')
+feminino = ['F', 'FEMININO', 'MULHER', 'FEMEA']
+masculino = ['M', 'MASCULINO', 'HOMEM', 'MACHO']
+  
+if sexo_usuario in feminino:
+  situacao = 'Feminino'
+elif sexo_usuario in masculino:
+  situacao = 'Masculino'
+else:
+  situacao = 'Sexo inválido'
+    
+resultado = (f'''
+Você é do sexo: {situacao}
+''')
+  
+print(resultado)

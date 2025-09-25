@@ -1,23 +1,24 @@
-def calcular_nota(nota1, nota2, nota3, nota4, media):
-  if media >= 6.0:
-    return 'Aprovado'
-  elif media >= 5.0:
-    return 'de Recuperação'
-  else:
-    return 'Reprovado'
-  
-  return (nota1 + nota2 + nota3 + nota4) / 4
+def calcular_media(*notas):
+  return sum(notas) / len(notas)
 
 try:
-  nome_aluno = input('Digite o nome do aluno: ')
-  n1 = float(input('Digite a nota 1: '))
-  n2 = float(input('Digite a nota 2: '))
-  n3 = float(input('Digite a nota 3: '))
-  n4 = float(input('Digite a nota 4: '))
-
-  media = calcular_nota(n1, n2, n3, n4)
+  nome_aluno = input('Digite seu nome: ')
+  nome_disciplina = input('Digite a disciplina: ')
   
-  print(f'{nome_aluno}, sua média foi de {media} e você está {situacao}.')
+  notas_aluno = [float(input(f'Digite a nota {i+1}: ')) for i in range(3)]
+  
+  media_final = calcular_media(*notas_aluno)
+  
+  situacao_aluno = 'Aprovado' if media_final >= 6.0 else 'Reprovado'
+  
+  resultado = (f'''
+Nome: {nome_aluno}
+Notas: {notas_aluno}
+Média: {media_final}
+Situação: {situacao_aluno}
+''')
+  
+  print(resultado)
   
 except ValueError:
   print('Erro: Número digitado inválido.')
