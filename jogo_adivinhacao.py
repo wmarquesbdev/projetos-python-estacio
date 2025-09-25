@@ -1,13 +1,13 @@
 import random
 
-numeroSecreto = random.randint(1, 100)
+numero_secreto = random.randint(1, 100)
 palpite = None
 
-while palpite != numeroSecreto:
+while palpite != numero_secreto:
   palpite = int(input('tente adivinhar o número secreto: '))
-  if palpite < numeroSecreto:
+  if palpite < numero_secreto:
     print('O número secreto é MAIOR.')
-  elif palpite > numeroSecreto:
+  elif palpite > numero_secreto:
     print('O número secreto é MENOR.')
 
-print(f'Você acertou, o número secreto é {numeroSecreto}')
+print(f'Você acertou, o número secreto é {numero_secreto}')

@@ -1,11 +1,11 @@
 # O loop for é usado para percorrer os itens de uma sequência (como uma lista), um por um, do início ao fim.
 # Listar todas as tarefas de um dia.
 
-listaDeTarefas = ['acordar', 'estudar python', 'almoçar', 'trabalhar no projeto']
+lista_de_tarefas = ['Acordar', 'Estudar python', 'Almoçar', 'Trabalhar no projeto']
 
-print('minhas tarefas hoje:')
+print('Minhas tarefas hoje:')
 
-for tarefa in listaDeTarefas:
+for tarefa in lista_de_tarefas:
   print(f'- {tarefa}')
   
-print('fim da lista')
+print('Fim da lista')
